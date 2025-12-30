@@ -1,4 +1,3 @@
-# train_yolo.py
 import argparse
 from pathlib import Path
 import yaml
@@ -54,9 +53,9 @@ if __name__ == "__main__":
     if not check_dataset_structure(args.data_dir):
         raise ValueError("Dataset structure salah. Pastikan ada train/valid/test + images/labels")
 
-    # Buat YAML
+    # YAML
     yaml_file = f"{args.data_dir}.yaml"
-    classes = [Path(args.data_dir).name, "none"]  # 2 kelas: lidah/kuku atau background
+    classes = [Path(args.data_dir).name, "none"] 
     create_yaml(args.data_dir, classes, yaml_file)
 
     # Train

@@ -1,4 +1,3 @@
-# utils.py
 from pathlib import Path
 
 def check_dataset_structure(base_dir: str):
